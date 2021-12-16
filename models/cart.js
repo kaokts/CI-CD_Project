@@ -1,10 +1,12 @@
 module.exports = function Cart(oldCart) {
+    console.log("lol : ",oldCart);
     this.items = oldCart.items || {};  //if no items are present just return empty
     this.totalQty = oldCart.totalQty || 0;
     this.totalPrice = oldCart.totalPrice || 0;
 
     this.add = function (item, id) {//here id is the id which when the product is stored in the database is assigned with that
         var storedItem = this.items[id];
+        //console.log("Hello :  ",item,id);
         if (!storedItem) {//if item is not added still then add it and increment the quantity outside
             storedItem = this.items[id] = {item: item, qty: 0, price: 0};
         }

@@ -31,7 +31,7 @@ var products = [
         price: 18
     }),
     new Product({
-        imagePath: 'https://d27zlipt1pllog.cloudfront.net/pub/media/catalog/product/b/o/bou0001_1.jpg',
+        imagePath: 'https://sc04.alicdn.com/kf/Ubbae9421ebf0452e831ac383c18a540e1.jpg',
         title: 'Bournvita',
         description: '1kg Bournvita',
         price: 62
@@ -49,7 +49,7 @@ var products = [
         price: 123
     }),
     new Product({
-        imagePath: 'https://www.pureindianfoods.com/v/vspfiles/photos/GHEE-2T.jpg',
+        imagePath: 'https://www.u-buy.vn/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjFPV1BBZHBwdkwuX1NMMTExMF8uanBn.jpg',
         title: 'ghee',
         description: '1kg ghee',
         price: 68
