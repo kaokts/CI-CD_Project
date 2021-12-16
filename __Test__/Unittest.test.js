@@ -18,7 +18,7 @@ describe("Test cart.js", () => {
           },
           totalQty: 2
         }
-      expect(oldcart.totalQty).toBe(2);
+      expect(oldcart.totalQty).toBe(3);
     });
 
 });
