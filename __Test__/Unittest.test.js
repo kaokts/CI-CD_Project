@@ -10,17 +10,15 @@ describe("Test cart.js", () => {
             var test = cart(oldcart);
             expect(test).not.toBeNull();
     });
-    test("Check quantity in stock", () => {
+    test("Check total quantity in stock", () => {
       var oldcart = {
-          // items: { 
-          //   '613c83965af56b30307f57ce': { item: [Object], qty: 1, price: 32 },
-          //   '613c83965af56b30307f57d3': { item: [Object], qty: 1, price: 72 } 
-          // },
+          items: { 
+            '613c83965af56b30307f57ce': { item: [Object], qty: 1, price: 32 },
+            '613c83965af56b30307f57d3': { item: [Object], qty: 1, price: 72 } 
+          },
           totalQty: 2
         }
-      var test = cart(oldcart);
-      // expect(test).totalQty;
-      expect(test).toEqual(expect.any(totalQty));
+      expect(oldcart.totalQty).toBe(2);
     });
 
 });
