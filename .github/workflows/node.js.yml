@@ -43,7 +43,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: kaokts/projectcs360-img
+#           tags: kaokts/projectcs360-img
       - name: Configure AWS credentials
         if: success()
         uses: aws-actions/configure-aws-credentials@13d241b293754004c80624b5567555c4a39ffbe3
