@@ -64,6 +64,10 @@ passport.use('local.signin', new LocalStrategy({
         return done(null, false, req.flash('error', messages));
     }
     User.findOne({'email': email}, function (err, user) {
+        console.log("=========================");
+        console.log(email);
+        console.log(password);
+        console.log("=========================");
         if(err) {
             return done(err);
         }

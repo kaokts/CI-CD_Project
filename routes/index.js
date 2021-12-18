@@ -23,8 +23,7 @@ router.get('/', function(req, res, next) {
 router.get('/add-to-cart/:id', function (req, res) {//this id is that id which every product gets when it  get stored in database
     var productId = req.params.id;//if cart is non empty then return that else return empty {}
     var cart = new Cart(req.session.cart ? req.session.cart : {});
-
-    Product.findById(productId, function (err, product) {
+        Product.findById(productId, function (err, product) {
         if(err) {
             return res.redirect('/');
         }
