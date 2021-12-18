@@ -42,7 +42,7 @@ jobs:
         if: success()
         uses: docker/build-push-action@v2
         with:
-          context: kaokts/projectcs360
+          context: kaokts/projectcs360:latest
           push: true
           tags: kaokts/projectcs360-img
       - name: Configure AWS credentials
