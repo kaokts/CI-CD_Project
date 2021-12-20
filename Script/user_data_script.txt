@@ -2,9 +2,27 @@
 sudo yum -y update
 
 sudo amazon-linux-extras install docker -y
+cd /etc/yum.repos.d/ 
+echo "
+[mongodb-org-5.0]
+
+name=MongoDB Repository
+
+baseurl=https://repo.mongodb.org/yum/amazon/2/mongodb-org/5.0/x86_64/
+
+gpgcheck=1
+
+enabled=1
+
+gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc" >> mongodb-org-5.0.repo
+cd /home/ec2-user/
+sudo yum install -y mongodb-org
+sudo systemctl start mongod
+
+
 sudo service docker start
 
 sudo gpasswd -a ec2-user docker
 newgrp docker
 
-docker run -dp 3000:3000 kaokts/projectcs360-img
+docker run -d -p 3000:3000 kaokts/projectcs360-img
