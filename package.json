@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "seed": "node ./seed/product-seeder.js"
   },
   "jest": {
     "transform": {
