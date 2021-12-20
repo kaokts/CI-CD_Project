@@ -1,12 +1,10 @@
 FROM node:16
 
-COPY . /user/app
-WORKDIR /user/app
+# Create app directory
+WORKDIR /app
 
-RUN npm install
-RUN cd seed/
-RUN node product-seeder.js
-RUN cd ..
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]
+
 EXPOSE 3000
-
 CMD ["npm", "start"]
