@@ -2,7 +2,6 @@
 sudo yum -y update
 
 sudo amazon-linux-extras install docker -y
-
 sudo service docker start
 
 sudo gpasswd -a ec2-user docker
