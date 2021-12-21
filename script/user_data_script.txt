@@ -36,4 +36,4 @@ sudo service docker start
 sudo gpasswd -a ec2-user docker
 newgrp docker
 
-docker run -d -p 3000:3000 kaokts/projectcs360-img
+docker run -d -p 3000:3000 kao22013/shopping-cart-web
