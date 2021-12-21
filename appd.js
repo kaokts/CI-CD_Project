@@ -18,7 +18,7 @@ var userRoutes = require('./routes/user');
 
 var app = express();
 
-mongoose.connect('host.docker.internal:27017/shopping');
+mongoose.connect('mongodb://ec2-44-201-181-78.compute-1.amazonaws.com:27017/shopping');
 require('./config/passport');
 
 // view engine setup
