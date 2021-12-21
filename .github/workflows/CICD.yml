@@ -63,8 +63,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: dev
       - run: ls
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@13d241b293754004c80624b5567555c4a39ffbe3
@@ -79,4 +77,4 @@ jobs:
         env:
           KEY_PAIR_NAME: ${{ secrets.AWS_KEYPAIR_NAME }}
           SECGROUP_ID: ${{ secrets.AWS_SECGROUP_ID }}
-        run: aws ec2 run-instances --image-id ami-04902260ca3d33422 --instance-type t2.micro  --key-name $KEY_PAIR_NAME --security-group-ids $SECGROUP_ID --user-data file://user_data_script.txt
+        run: aws ec2 run-instances --image-id ami-0ed9277fb7eb570c9 --instance-type t2.micro  --key-name $KEY_PAIR_NAME --security-group-ids $SECGROUP_ID --user-data file://user_data_script.txt
