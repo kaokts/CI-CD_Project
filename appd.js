@@ -18,7 +18,7 @@ var userRoutes = require('./routes/user');
 
 var app = express();
 
-mongoose.connect('mongodb://ec2-52-205-112-107.compute-1.amazonaws.com:27017/shopping');
+mongoose.connect('mongodb://ec2-54-164-135-242.compute-1.amazonaws.com:27017/shopping');
 require('./config/passport');
 
 // view engine setup
