@@ -36,8 +36,8 @@ jobs:
         run: |
              npm ci 
              npm install
-             npm install passport
-             npm install stripe
+#             npm install passport
+#             npm install stripe
 #       - run: npm run build --if-present
         
       - run: npm test
