@@ -112,8 +112,8 @@ test("Check cart is not empty after add 2 item", () => {
       __v: 0
     }
     let cart = new Cart(givenCart);
-    cart.add(givenItem, givenItem.id);
-    expect(cart.totalQty).toBe(2);
+    cart.addpair(givenItem, givenItem.id);
+    expect(cart.totalQty).toBe(3);
   }); 
 
   test("Check total price in cart(add)", () => {

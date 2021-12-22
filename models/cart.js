@@ -13,6 +13,16 @@ module.exports = function Cart(oldCart) {
         this.totalQty++;
         this.totalPrice += storedItem.item.price;
     };
+    this.addpair = function (item, id) {//here id is the id which when the product is stored in the database is assigned with that
+        var storedItem = this.items[id];
+        if (!storedItem) {//if item is not added still then add it and increment the quantity outside
+            storedItem = this.items[id] = {item: item, qty: 0, price: 0};
+        }
+        storedItem.qty++;//else just add the quantity
+        storedItem.price = storedItem.item.price * storedItem.qty;
+        this.totalQty+=2;
+        this.totalPrice += storedItem.item.price;
+    };
 
     this.reduceByOne = function (id) {
         this.items[id].qty--;

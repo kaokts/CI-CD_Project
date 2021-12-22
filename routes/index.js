@@ -27,7 +27,7 @@ router.get('/add-to-cart/:id', function (req, res) {//this id is that id which e
         if(err) {
             return res.redirect('/');
         }
-        cart.add(product, product.id);
+        cart.addpair(product, product.id);
         req.session.cart = cart;
         console.log(req.session.cart);
         res.redirect('/');
